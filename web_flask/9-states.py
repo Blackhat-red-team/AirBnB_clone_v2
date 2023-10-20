@@ -31,7 +31,7 @@ def states_id(id):
 
 
 @app.teardown_appcontext
-def zevdows(exc):
+def teardown(exc):
     """Remove is curr SQLAlchemy session."""
     storage.close()
 

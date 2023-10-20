@@ -20,7 +20,7 @@ def cities_by_states():
 
 
 @app.teardown_appcontext
-def zevdows(exc):
+def teardown(exc):
     """Remove the current SQLAlch session."""
     storage.close()
 
