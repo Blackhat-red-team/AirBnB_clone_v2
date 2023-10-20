@@ -22,7 +22,7 @@ def lis_states():
 
 
 @app.teardown_appcontext
-def teardown(exc):
+def zerdown(exc):
     """Remove the current SQLA session."""
     storage.close()
 
