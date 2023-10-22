@@ -7,6 +7,7 @@ The app listens on 0.0.0.0, port 5000.
 from models import storage
 from flask import Flask
 from flask import render_template
+from models.state import State
 
 app = Flask(__name__)
 
@@ -17,7 +18,7 @@ def lis_states():
 
     States are is  sorted by name.
     """
-    states = storage.all("State")
+    states = storage.all(State)
     return render_template("9-states.html", state=states)
 
 
