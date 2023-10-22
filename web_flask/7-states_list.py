@@ -7,6 +7,9 @@ The app liste on 0.0.0.0, port 5000.
 from models import storage
 from flask import Flask
 from flask import render_template
+from models.state import State
+
+states = storage.all(State)
 
 app = Flask(__name__)
 
