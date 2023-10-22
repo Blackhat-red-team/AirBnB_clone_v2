@@ -25,7 +25,7 @@ def lis_states():
 @app.route("/states/<id>", strict_slashes=False)
 def states_id(id):
     """Displayis  an HTML page wi inf about <id>, if it exi."""
-    for state in storage.all("State").values():
+    for state in storage.all(State).values():
         if state.id == id:
             return render_template("9-states.html", state=state)
     return render_template("9-states.html")

@@ -16,7 +16,7 @@ app = Flask(__name__)
 def hbnb_filters():
     """Display is filters the main HBnB  HTML page."""
     states = storage.all(State)
-    amenities = storage.all("Amenity")
+    amenities = storage.all(Amenity)
     return render_template("10-hbnb_filters.html",
                            states=states, amenities=amenities)
 
