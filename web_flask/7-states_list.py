@@ -9,7 +9,7 @@ from flask import Flask
 from flask import render_template
 from models.state import State
 
-states = storage.all(State)
+
 
 app = Flask(__name__)
 
@@ -20,7 +20,7 @@ def lis_states():
 
     States are sort by name.
     """
-    states = storage.all("State")
+    states = storage.all(State)
     return render_template("7-states_list.html", states=states)
 
 
